@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+from functions/speakIndex.py import habla
+{% load static %}
+{% block titulo %} Inicio{% endblock %}
+{% block h1 %} Bienvenido a ChamaBot.{% endblock %}
+{% block h2 %} Cual es tu super Personalidad?🔥 {% endblock %}
+{% block p %} Por favor, clickea sobre la tarjeta que describa mejor tu personalidad. {% endblock %}
+{% block contenido %}
+<!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+<!-- <py-script>
+  from cgitb import text
+  from gtts import gTTS
+  import os
+
+  def habla():
+  text= "Hola Jimmy. presentas fuerte inclinaciones por expresiones artísticas. Tienes marcados totes musicales y se te
+  daría bien la actuación"
+  language = "es-us"
+
+  speech = gTTS(text=text, lang=language, slow=False)
+  speech.save('texto.mp3')
+  os.system('start texto.mp3')
+</py-script>| -->
+<style>
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    text-align: center;
+
+  }
+
+  .tacos {
+    width: 80%;
+    margin-left: 2rem;
+  }
+
+  .bot {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 45rem;
+    margin-top: -20rem;
+  }
+
+  .bot img {
+    max-width: 100%;
+    width: 200px;
+    height: 285px;
+  }
+
+  .taco {
+    background-color: rgb(209, 233, 245);
+    color: rgb(4, 90, 147);
+    font-size: 125%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    width: 25%;
+    height: 5%;
+    border: thick solid gray;
+    margin: 5px;
+    float: left;
+
+  }
+
+  .taco:hover {
+    opacity: .9;
+    transform: scale(.9);
+  }
+
+  .taco img {
+    max-width: 100%;
+    width: 200px;
+    height: 100px;
+  }
+
+  .taco figcaption {
+    font-size: .8rem;
+  }
+</style>
+
+<div class="viewport">
+
+
+  <section id="tacos" class="tacos">
+
+    <div class="taco  funHablar" onclick={habla()}>
+      <figure>
+        <img src='{% static "constructor2.jpg" %}' alt="constructor">
+        <figcaption>El Constructor Habil 🔨</figcaption>
+      </figure>
+    </div>
+
+    <div class="taco">
+      <figure>
+        <img src='{% static "creativo.jpg" %}' alt="constructor">
+        <figcaption>El Creativo Soñador 🎨</figcaption>
+      </figure>
+    </div>
+
+    <div class="taco">
+      <figure>
+        <img src='{% static "persuasivo.png" %}' alt="constructor">
+        <figcaption>El Politico Persuasivo 📢</figcaption>
+      </figure>
+    </div>
+    <div class="taco">
+      <figure>
+        <img src='{% static "doc.jpg" %}' alt="constructor">
+        <figcaption>El que ama cuida de todos. 🩺</figcaption>
+      </figure>
+    </div>
+    <div class="taco">
+      <figure>
+        <img src='{% static "ordenado.jpg" %}' alt="constructor">
+        <figcaption>El Super Ordenado 📎</figcaption>
+      </figure>
+    </div>
+    <div class="taco">
+      <figure>
+        <img src='{% static "informatico.jpg" %}' alt="constructor">
+        <figcaption>El Genio Informatico 💻</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="bot">
+    <h5>SOY CHAMOBOT</h5>
+    <img src='{% static "constructor.jpg" %}' alt="bot">
+  </section>
+
+</div>
+
+<!-- NO SE SI ESTO ES SOLO PARA JS 
+  <script>
+    const divPersonalidad = document.querySelectorAll(".funHablar");
+    divPersonalidad.addEventListener("click", function (e) {
+      let confirm = confirm("HOLAAAAAA");
+      console.log(divPersonalidad);
+    });
+  </script>
+-->
+{% endblock %}
+
+#pip install gTTS
+#pip install pyttsx3
+#pip install sklearn
+#pip install nltk
+
+
+#cd app
+#python manage.py runserver
+
+#http://127.0.0.1:8000/index
+#http://127.0.0.1:8000/resultados
